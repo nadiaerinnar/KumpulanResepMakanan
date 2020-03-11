@@ -1,3 +1,12 @@
 package com.example.kumpulanresepmakanan
 
-data class ResepData (val jenis : String, val foodName: String, val penjelasan :String)
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class ResepData(
+    val jenis: String,
+    val poster: Int,
+    val foodName: String,
+    val penjelasan: String
+) : Parcelable
